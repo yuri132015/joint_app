@@ -1,12 +1,5 @@
-<% @users.each do |user| %>
-  <p>
-    <%= user.name %><br>
-    <%= image_tag user.image.url %>
-  </p>
-<% end %>
-<hr>
-<%= form_for :user, url: 'users/new'  do |f| %>
-  <p><%=f.label "投稿者" %><br><%= f.text_field :name, placeholder: 'ハンドルネーム' %></p>
+<h2>投稿</h2>
+<%= form_for :user, url: users_path  do |f| %>
   <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
   <p><%= f.submit value: '投稿' %></p>
 <% end %>
