@@ -12,9 +12,22 @@
  *
  *= require_tree .
  *= require_self
+ *= require dropzone/basic 
+ *= require dropzone/dropzone
  */
  @import "bootstrap";
 
 .posts_button {
     padding-left: 30px;
 }
+
+input[type="text"], textarea {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 5px;
+}
+
+textarea {
+    height: 160px;
+}
+
