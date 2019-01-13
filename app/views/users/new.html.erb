@@ -1,0 +1,7 @@
+<h2>投稿</h2>
+<%= form_for :user, url: users_path  do |f| %>
+  <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
+  <p><%= f.text_field :title, placeholder: 'enter title' %></p>
+  <p><%= f.text_area :body, placeholder: 'enter body text' %></p>
+  <p><%= f.submit value: '投稿' %></p>
+<% end %>
