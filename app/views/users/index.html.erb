@@ -1,6 +1,6 @@
 <div><h1>投稿一覧</h1></div>
 <div class="d-flex align-items-center">
-    <div>
+    <!-- <div>
     <ul class="photo">
     <li>
     <%= image_tag 'logo.png', class:'test'%>
@@ -18,5 +18,10 @@
     <%= image_tag 'logo.png', class:'test'%>
     </li>
     </ul>
-    </div>
+    </div> -->
+    <% @users.each do |user| %>
+      <%= image_tag user.image_url(:thumb).to_s %>
+      <p><%= link_to "編集", edit_user_path(user), method: :get %>
+      <p><%= link_to "削除", user_path(user), method: :delete, data: {confirm: "削除しますか？"} %></p>
+    <% end %>
 </div>

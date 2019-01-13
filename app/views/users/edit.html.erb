@@ -1,0 +1,7 @@
+<h2>編集</h2>
+<%= form_for @user, url: user_path(@user), html: { method: :patch } do |f| %>
+  <p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
+  <p><%= f.text_field :title, value: @user.title %></p>
+  <p><%= f.text_area :body, value: @user.body %></p>
+  <p><%= f.submit value: '更新' %></p>
+<% end %>
