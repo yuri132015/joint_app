@@ -15,13 +15,14 @@
  *= require dropzone/basic 
  *= require dropzone/dropzone
  */
- @import "bootstrap";
+@import "bootstrap";
 
 .posts_button {
     padding-left: 30px;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
     box-sizing: border-box;
     width: 400px;
     padding: 5px;
@@ -31,3 +32,13 @@ textarea {
     height: 160px;
 }
 
+li {
+    display: inline-block;
+}
+
+.image-box {}
+
+.image-box li {
+    text-align: center;
+    margin: 30px;
+}

@@ -19,10 +19,13 @@
     </li>
     </ul>
     </div> -->
+    <ul class="image-box">
     <% @users.each do |user| %>
-      <%= image_tag user.image_url(:thumb).to_s %>
-      <p><%= link_to "[編集]", edit_user_path(user), method: :get %></p>
-      <p> | <p>
-      <p><%= link_to "[削除]", user_path(user), method: :delete, data: {confirm: "削除しますか？"} %></p>
+    <li>
+      <div><%= image_tag user.image_url(:thumb).to_s %></div>
+      <span><%= link_to "[編集]", edit_user_path(user), method: :get %></span>
+      <span><%= link_to "[削除]", user_path(user), method: :delete, data: {confirm: "削除しますか？"} %></span>
+      </li>
     <% end %>
+    </ul>
 </div>
