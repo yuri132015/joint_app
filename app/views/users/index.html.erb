@@ -22,7 +22,8 @@
     <ul class="image-box">
     <% @users.each do |user| %>
     <li>
-      <div><%= image_tag user.image_url(:thumb).to_s %></div>
+      <div><%= link_to user.title, user_path(user) %></div>
+      <div><%= link_to image_tag(user.image_url(:thumb).to_s), user_path(user) %></div>
       <span><%= link_to "[編集]", edit_user_path(user), method: :get %></span>
       <span><%= link_to "[削除]", user_path(user), method: :delete, data: {confirm: "削除しますか？"} %></span>
       </li>
