@@ -38,15 +38,8 @@ li {
 
 .image-box {}
 
-.image-box ul {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .image-box li {
-    text-align: center;
-    margin: 30px;
+        text-align: center;
+        width: 30%;
+        padding: 30px 15px;
 }
